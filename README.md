@@ -19,6 +19,12 @@ TransNet V2 (this repo) | **77.9** | **96.2** | 93.9
 ### :rocket: PYTORCH VERSION for inference RELEASED
 **See [_inference-pytorch_ folder](https://github.com/soCzech/TransNetV2/tree/master/inference-pytorch) and its _README_ file.**
 
+### ONNX runtime notes for data-pipeline use
+For local ONNX inference setup, CPU/GPU benchmark results, and notes for using
+this repository as a BOS GBuffer data-pipeline algorithm submodule, see
+[`docs/onnx_runtime_environment.md`](docs/onnx_runtime_environment.md) and
+[`docs/transnetv2_onnx_cpu_gpu_notes.md`](docs/transnetv2_onnx_cpu_gpu_notes.md).
+
 
 ### REPLICATE THE WORK
 > Note the datasets for training are tens of gigabytes in size, hundreds of gigabytes when exported.

@@ -1,6 +1,31 @@
 *.tfrecord
 *.npy
+*.npz
 *.mp4
+*.onnx
+*.pth
+*.pt
+*.ckpt
+*.safetensors
 *.pickle
 .idea
 .ipynb_checkpoints
+
+# Local runtime environments and generated outputs.
+.venv/
+.venv-*/
+venv/
+env/
+outputs/
+results/
+benchmark/
+benchmarks/
+tmp/
+cache/
+
+# Model weights should live in external model/cache directories, not in this
+# algorithm submodule.
+models/
+ckpt/
+checkpoints/
+inference/transnetv2-weights/
