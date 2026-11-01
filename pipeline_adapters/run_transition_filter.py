@@ -249,6 +249,10 @@ def run_inference(video_path: Path, params: dict[str, Any]) -> dict[str, Any]:
         raise RuntimeFailure(f"Missing TransNetV2 ONNX runtime dependency: {exc}") from exc
 
     model_path = Path(str(params.get("model_path") or DEFAULT_MODEL_PATH))
+    if not model_path.is_file():
+        fallback_model = Path("/data/bc/models/elya5/transnetv2/transnetv2.onnx")
+        if fallback_model.is_file():
+            model_path = fallback_model
     provider = str(params.get("provider") or "CPUExecutionProvider")
     device_id = params.get("device_id")
     device_id_int = int(device_id) if device_id is not None and str(device_id).strip() != "" else None
